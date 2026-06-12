@@ -9,22 +9,20 @@
 
 	<style>
 	.track {
-	  padding: 15px;
-	  margin: 10px 0;
-	  background: #181818;
-	  border-radius: 8px;
-	  cursor: pointer;
-	  transition: 0.2s;
+		padding: 15px;
+		margin: 10px 0;
+		background: #181818;
+		border-radius: 8px;
+		transition: 0.2s;
 	}
 
 	.track:hover {
-	  background: #282828;
-	  transform: scale(1.02);
+		background: #282828;
 	}
 
 	.track p {
-	  margin: 0;
-	  color: white;
+		margin: 0 0 10px 0;
+		color: white;
 	}
 	</style>
 </head>
@@ -33,12 +31,13 @@
 
 <div id="wrapper">
 
-	<!-- Header -->
+	<!-- HEADER -->
 	<header id="header">
 		<div class="inner">
 
 			<a href="index.html" class="logo">
-				<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">?!</span>
+				<span class="symbol"><img src="images/logo.svg" alt="" /></span>
+				<span class="title">?!</span>
 			</a>
 
 			<nav>
@@ -50,7 +49,7 @@
 		</div>
 	</header>
 
-	<!-- Menu -->
+	<!-- MENU -->
 	<nav id="menu">
 		<h2>Menu</h2>
 		<ul>
@@ -71,35 +70,51 @@
 				<img src="images/pic13.jpg" alt="" />
 			</span>
 
-			<p>This Electronic Press Kit presents a selection of my work as a UK-based producer and vocalist, showcasing my development over the past year. The material included reflects a progression in sound, approach, and confidence, moving from early ideas and initial sketches to more refined and intentional productions.</p>
+			<p>
+				This Electronic Press Kit presents a selection of my work as a UK-based producer and vocalist,
+				showcasing my development over the past year. The material included reflects a progression in sound,
+				approach, and confidence, moving from early ideas and sketches to more refined productions.
+			</p>
 
-			<p>Over the course of this period, my growth has been shaped through consistent collaboration with a close friend, as well as guidance and feedback from more experienced producers and industry professionals. These experiences have played a key role in refining my production skills, broadening my understanding of arrangement and sound design, and helping me develop a clearer artistic direction.</p>
+			<p>
+				Over this period, my growth has been shaped through collaboration with a close friend,
+				as well as feedback from experienced producers and industry professionals.
+				These experiences have helped me improve my production skills, arrangement,
+				and overall sound design.
+			</p>
 
-			<p>The music featured below represents a contrast between earlier work and more recent output, highlighting how my sound has evolved within just a few months. I’m always open to new collaborations, feedback, and opportunities, and I welcome anyone interested in working together or learning more about my work to get in touch.</p>
+			<p>
+				The tracks below show the evolution of my sound over time.
+				I’m always open to collaboration, feedback, and new opportunities.
+			</p>
 
-			<!-- TRACK LIST -->
-		<h2>Selected Tracks</h2>
+			<h2>Selected Tracks</h2>
 
-<div class="track">
-  <p>What I was producing before college</p>
-  <audio controls>
-    <source src="ShowcaseLoveya.mp3" type="audio/mpeg">
-  </audio>
-</div>
+			<!-- TRACK 1 -->
+			<div class="track">
+				<p>What I was producing before college</p>
+				<audio controls>
+					<source src="ShowcaseLoveya.mp3" type="audio/mpeg">
+				</audio>
+			</div>
 
-<div class="track">
-  <p>Developed throughout the college year</p>
-  <audio controls>
-    <source src="ShowcaseImlearning.mp3" type="audio/mpeg">
-  </audio>
-</div>
+			<!-- TRACK 2 -->
+			<div class="track">
+				<p>Developed throughout the college year</p>
+				<audio controls>
+					<source src="ShowcaseImlearning.mp3" type="audio/mpeg">
+				</audio>
+			</div>
 
-<div class="track">
-  <p>My main project for the end of year showcase</p>
-  <audio controls>
-    <source src="ShowcaseLatest.mp3" type="audio/mpeg">
-  </audio>
-</div>
+			<!-- TRACK 3 -->
+			<div class="track">
+				<p>My main project for the end of year showcase</p>
+				<audio controls>
+					<source src="ShowcaseLatest.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+
+		</div>
 	</div>
 
 	<!-- FOOTER -->
@@ -143,28 +158,6 @@
 	</footer>
 
 </div>
-
-<!-- SCRIPTS -->
-<script>
-function playTrack(id) {
-  const audio = document.getElementById(id);
-
-  if (!audio) {
-    alert("Audio ID not found: " + id);
-    return;
-  }
-
-  document.querySelectorAll("audio").forEach(a => {
-    a.pause();
-    a.currentTime = 0;
-  });
-
-  audio.play().catch(err => {
-    alert("Audio failed to play. File missing or blocked.");
-    console.log(err);
-  });
-}
-</script>
 
 </body>
 </html>
