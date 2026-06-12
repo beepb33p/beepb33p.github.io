@@ -171,6 +171,14 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+	// force menu init fix (Phantom sometimes bugs without this)
+	(function($){
+		$(function(){
+			$('#menu').appendTo('body');
+		});
+	})(jQuery);
+</script>
 
 </div>
 
