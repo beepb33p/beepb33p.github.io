@@ -150,22 +150,24 @@
 </div>
 
 <!-- SCRIPTS -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
 <script>
 function playTrack(id) {
-	let audios = document.querySelectorAll("audio");
+  const audio = document.getElementById(id);
 
-	audios.forEach(a => {
-		a.pause();
-		a.currentTime = 0;
-	});
+  if (!audio) {
+    alert("Audio ID not found: " + id);
+    return;
+  }
 
-	document.getElementById(id).play();
+  document.querySelectorAll("audio").forEach(a => {
+    a.pause();
+    a.currentTime = 0;
+  });
+
+  audio.play().catch(err => {
+    alert("Audio failed to play. File missing or blocked.");
+    console.log(err);
+  });
 }
 </script>
 
