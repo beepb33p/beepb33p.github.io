@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+	<head>
 	<title>About</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -22,6 +22,28 @@
 
 	audio {
 		width: 100%;
+	}
+
+	.epk-images {
+		display: flex;
+		gap: 15px;
+		margin: 20px 0;
+	}
+
+	.epk-images img {
+		width: 33.33%;
+		border-radius: 8px;
+		object-fit: cover;
+	}
+
+	@media (max-width: 768px) {
+		.epk-images {
+			flex-direction: column;
+		}
+
+		.epk-images img {
+			width: 100%;
+		}
 	}
 	</style>
 </head>
@@ -65,9 +87,12 @@
 
 			<h1>About</h1>
 
-			<span class="image main">
-				<img src="images/pic13.jpg" alt="" />
-			</span>
+			<!-- 3 IMAGE HEADER ROW -->
+<div class="epk-images">
+	<img src="images/photo1.jpg" alt="EPK Image 1">
+	<img src="images/photo2.jpg" alt="EPK Image 2">
+	<img src="images/photo3.jpg" alt="EPK Image 3">
+</div>
 
 			<p>
 				The above Electronic Press Kit focuses on my branding, using a colourful and contrasting visual identity, while also referencing my key inspirations to contextualise my creative direction.
